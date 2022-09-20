@@ -1,55 +1,64 @@
-# Zen Sushi Restaurant Management System
-A restaurant management system designed for customers, kitchen staffs, and restaurant admins. Logged in customers shall be able to browse through the menu, add dish to cart, place orders, and settle payments via PayPal. On the other hand, kitchen staffs and admins utilize this system to carry out day-to-day tasks which includes managing the restaurant’s menu, discount codes, orders, and viewing the restaurants’ overall performance.
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-## Project Specifications
-This project is fully mobile-responsive and is implemented using PHP's Laravel, JavaScript, HTML, CSS, Bootstrap, and ApexCharts.js. Listed below are the list of specifications in this project:
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-1. **Registration, Login, Logout, Change Password**
-    - Unregistered user may register as a customer.
-    - Registered customers, kitchen staffs, and admins may log in with their credentials.
-    - Admins may create new customer, kitchen staff, or admin account.
-    - Users are allowed to change their password.
-    - All users may log out.
-2. **Menu**
-    - Unregistered user, logged in customer, and restaurant admins may view the restaurant's menu.
-    - Restaurant admin may add, update, or delete a menu item.
-3. **Cart** (Only for logged in customers)
-    - View cart.
-    - Add dish to cart.
-    - Update dish quantity.
-    - Remove cart item.
-4. **Payment** (Only for logged in customers)
-    - Apply discount code during checkout.
-    - Insert PayPal credentials and proceed with payment.
-5. **Order**
-    - Customers:
-        - View active order (only their order, not someone else's).
-        - View previous orders (only their order, not someone else's).
-    - Kitchen Staff and Admins:
-        - View all active orders.
-        - View all previous orders.
-        - Update order status.
-6. **Discount**
-    - Restaurant admins may view, create, update, and delete discount vouchers.
-    - Customers can apply discount voucher during checkout (if their order meets the voucher's requirements).
-7. **Dashboard** (Only for restaurant admins)
-    - View latest 30 days dashboard (overview & snapshot of business' profitability)
+## About Laravel
 
-## Installation:
-1. Clone this project and install PHP (if haven't already).
-2. Run `php artisan serve` to startup the server locally.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-### To create dummy data:
-This step is not needed unless you need extra fresh dummy data. Assuming all tables are empty except for user table:
-1. `Menu::factory()->times(20)->create();`
-2. Create some discount vouchers (Can program a DiscountFactory if necessary)
-3. `Transaction::factory()->times(50)->create();` - This will create 50 order instances too
-4. `CartItem::factory()->times(150)->create();` - Each cart will be assigned to 1 of the orders made above
-5. Open up your *artisan tinker* and execute:
-    ```php
-    $transactions = Transaction::all();
-    foreach ($transactions as $t) {
-        $t->final_amount = $t->order->getTotalFromScratch();
-        $t->save();
-    }
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
+## Learning Laravel
+
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+
+## Laravel Sponsors
+
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+
+### Premium Partners
+
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
+- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+- **[Lendio](https://lendio.com)**
+
+## Contributing
+
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
