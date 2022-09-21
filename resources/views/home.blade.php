@@ -24,8 +24,8 @@
 <section class="banner">
     <div class="container">
         <div class="col-md-10 col-lg-8 details">
-            <h3>FRESHEST SUSHI IN TOWN</h3>
-            <h1>Experience a taste of sushi as if you are in Japan</h1>
+            <h3>FRESHEST COFFE IN TOWN</h3>
+            <h1>Experience a taste of coffee as if your favorite</h1>
             <a href="{{ route('menu') }}" class="btn primary-btn" style="width:250px;">Discover menu</a>
         </div>
     </div>
@@ -40,8 +40,8 @@
                     <img src="./images/chef1.jpg" alt="">
                 </div>
                 <div class="chef-desc d-flex flex-column align-items-center justify-content-start">
-                    <p class="chef-name">Chin Chong</p>
-                    <p class="chef-position">Kitchen Lead</p>
+                    <p class="chef-name">Hadi</p>
+                    <p class="chef-position">Barista</p>
                 </div>
             </div>
             <div class="card col-lg-3 col-md-8 col-10 mt-5">
@@ -49,8 +49,8 @@
                     <img src="./images/chef2.jpg" alt="">
                 </div>
                 <div class="chef-desc d-flex flex-column align-items-center justify-content-start">
-                    <p class="chef-name">Louis Hansel</p>
-                    <p class="chef-position">Sashimi Expert</p>
+                    <p class="chef-name">Erick</p>
+                    <p class="chef-position">Barista</p>
                 </div>
             </div>
             <div class="card col-lg-3 col-md-8 col-10 mt-5">
@@ -58,8 +58,8 @@
                     <img src="./images/chef3.jpg" alt="">
                 </div>
                 <div class="chef-desc d-flex flex-column align-items-center justify-content-start">
-                    <p class="chef-name">Febrian Zakaria</p>
-                    <p class="chef-position">Kitchen Helper</p>
+                    <p class="chef-name">Dinal</p>
+                    <p class="chef-position">Barista</p>
                 </div>
             </div>
         </div>
