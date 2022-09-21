@@ -39,7 +39,8 @@
         BANNER 
 ======================*/
 .banner {
-    background-image: url('/images/sushi-banner.jpg');
+    /* background-image: url('/images/sushi-banner.jpg'); */
+    background-image: url('/images/jong.PNG');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
