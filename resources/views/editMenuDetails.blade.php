@@ -57,7 +57,7 @@
     <div class="mb-1">
         <label for="ItemPrice" class="form-label">Item Price</label>
         <div class="input-group mb-3">
-            <span class="input-group-text">RM</span>
+            <span class="input-group-text">Rp</span>
             <input name="menuPrice" type="number" min=0 step=0.01 class="form-control price-class" class="form-control" placeholder="Price" aria-label="Item Price" value="{{ $menu['price'] }}" required>
             <span class="validity"></span>
         </div>
@@ -68,7 +68,7 @@
     <div class="mb-1">
         <label for="ItemCost" class="form-label">Item Estimated Cost</label>
         <div class="input-group mb-3">
-            <span class="input-group-text">RM</span>
+            <span class="input-group-text">Rp</span>
             <input name="menuEstCost" type="number" min=0 step=0.01 class="form-control price-class" class="form-control" placeholder="Cost" aria-label="Item Cost" value="{{ $menu['estCost'] }}" required>
             <span class="validity"></span>
         </div>

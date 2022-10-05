@@ -52,7 +52,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="minSpend" class="form-label">Minimum Spend (RM)</label>
+            <label for="minSpend" class="form-label">Minimum Spend (Rp)</label>
             <input type="number" class="form-control @error('minSpend') is-invalid @enderror" id="minSpend" 
                 name="minSpend" step=".01" value="{{ old('minSpend') ? old('minSpend') : $discount->minSpend }}">
             @error('minSpend')
@@ -63,7 +63,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="cap" class="form-label">Cap At (RM)</label>
+            <label for="cap" class="form-label">Cap At (Rp)</label>
             <input type="number" class="form-control @error('cap') is-invalid @enderror" id="cap" name="cap" 
                 min="0" max="999" step=".01" value="{{ old('cap') ?  old('cap') : $discount->cap }}">
             @error('cap')
