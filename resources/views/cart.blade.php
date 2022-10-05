@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="col-6 px-4">
                                     <h5 class="text-dark">{{ $item->menu->name }}</h5>
-                                    <h5 class="text-secondary">RM {{ $item->menu->price * $item->quantity }}</h5>
+                                    <h5 class="text-secondary">Rp {{ $item->menu->price * $item->quantity }}</h5>
                                 </div>
                                 <div class="col-4 d-flex align-items-baseline justify-content-end">
                                     <!-- Decrement button -->
@@ -72,7 +72,7 @@
                         @endforeach
                         <div class="d-flex justify-content-between px-3 mt-5">
                             <h5 class="text-dark">Subtotal</h5>
-                            <h5 class="text-dark">RM {{ $subtotal }}</h5>
+                            <h5 class="text-dark">Rp {{ $subtotal }}</h5>
                         </div>
 
                         <!-- CHECKOUT ALONG WITH DISCOUNT CODE APPLICATION START -->
