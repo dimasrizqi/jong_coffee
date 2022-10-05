@@ -131,6 +131,6 @@ class CartController extends Controller
         $order = auth()->user()->orders()->create($data);
         
         // subtotal for now, it will be 'total' after discounting.
-        return redirect()->route('processTransaction', ['transactionAmount' => $total, 'orderId' => $order->id, 'discountID' => $discountID]); 
+        // return redirect()->route('processTransaction', ['transactionAmount' => $total, 'orderId' => $order->id, 'discountID' => $discountID]); 
     }
 }

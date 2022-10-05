@@ -1,8 +1,4 @@
-<!-- 
-    Programmer Name: Ms. Lim Jia Yong, Project Manager
-    Description: A page which displays all existing discount codes
-    Edited on: 10 April 2022
- -->
+
 
 @extends('layouts.backend')
 
