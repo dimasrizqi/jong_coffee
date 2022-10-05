@@ -158,26 +158,22 @@
             <div class="col-md-8 offset-md-1 col-12 text-center menu-type my-3">
                 <form method="get" action="{{ route('filterMenu') }}">
                     <button type="submit" name="menuType" value="" class="btn btn-light menu-type-button">All</button>
-                    <button type="submit" name="menuType" value="Appetizer" class="btn btn-light menu-type-button">Appetizer</button>
-                    <button type="submit" name="menuType" value="Sushi" class="btn btn-light menu-type-button">Sushi</button>
-                    <button type="submit" name="menuType" value="Temaki" class="btn btn-light menu-type-button">Temaki</button>
-                    <button type="submit" name="menuType" value="Bento" class="btn btn-light menu-type-button">Bento</button>
-                    <button type="submit" name="menuType" value="Ramen" class="btn btn-light menu-type-button">Ramen</button>
-                    <button type="submit" name="menuType" value="Beverage" class="btn btn-light menu-type-button">Beverage</button>
-                    <button type="submit" name="menuType" value="Dessert" class="btn btn-light menu-type-button">Dessert</button>
+                    <button type="submit" name="menuType" value="Appetizer" class="btn btn-light menu-type-button">Cofee</button>
+                    <button type="submit" name="menuType" value="Temaki" class="btn btn-light menu-type-button">Non Cofee</button>
+                    <button type="submit" name="menuType" value="Sushi" class="btn btn-light menu-type-button">Signature</button>
+                    <button type="submit" name="menuType" value="Bento" class="btn btn-light menu-type-button">Food</button>
+                   
                 </form>
             </div>
         @else
             <div class="col-md-8 offset-md-2 col-12 text-center menu-type my-3">
                 <form method="get" action="{{ route('filterMenu') }}">
                     <button type="submit" name="menuType" value="" class="btn btn-light menu-type-button">All</button>
-                    <button type="submit" name="menuType" value="Appetizer" class="btn btn-light menu-type-button">Appetizer</button>
-                    <button type="submit" name="menuType" value="Sushi" class="btn btn-light menu-type-button">Sushi</button>
-                    <button type="submit" name="menuType" value="Temaki" class="btn btn-light menu-type-button">Temaki</button>
-                    <button type="submit" name="menuType" value="Bento" class="btn btn-light menu-type-button">Bento</button>
-                    <button type="submit" name="menuType" value="Ramen" class="btn btn-light menu-type-button">Ramen</button>
-                    <button type="submit" name="menuType" value="Beverage" class="btn btn-light menu-type-button">Beverage</button>
-                    <button type="submit" name="menuType" value="Dessert" class="btn btn-light menu-type-button">Dessert</button>
+                    <button type="submit" name="menuType" value="Appetizer" class="btn btn-light menu-type-button">Cofee</button>
+                    <button type="submit" name="menuType" value="Temaki" class="btn btn-light menu-type-button">Non Cofee</button>
+                    <button type="submit" name="menuType" value="Sushi" class="btn btn-light menu-type-button">Signature</button>
+                    <button type="submit" name="menuType" value="Bento" class="btn btn-light menu-type-button">Food</button>
+                    
                 </form>
             </div>
         @endif
