@@ -32,13 +32,10 @@
             <label class="input-group-text" for="itemTypeInputGroup">Type:</label>
             <select name="menuType" class="form-select" id="itemTypeInputGroup" >
                 <option selected>{{ $menu['type'] }}</option>
-                <option name="menuType" value="Appetizer">Appetizer</option>
-                <option name="menuType" value="Sushi">Sushi</option>
-                <option name="menuType" value="Temaki">Temaki</option>
-                <option name="menuType" value="Bento">Bento</option>
-                <option name="menuType" value="Ramen">Ramen</option>
-                <option name="menuType" value="Beverage">Beverage</option>
-                <option name="menuType" value="Dessert">Dessert</option>
+                <option name="menuType" value="Appetizer" >Cofee</option>
+                <option name="menuType" value="Temaki" >Non Cofee</button>
+                <option name="menuType" value="Sushi" >Signature</button>
+                <option name="menuType" value="Bento" >Food</button>
             </select>
         </div>
     </div>

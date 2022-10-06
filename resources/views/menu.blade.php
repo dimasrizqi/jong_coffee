@@ -54,13 +54,10 @@
                                 <div class="input-group mb-3">
                                     <label class="input-group-text" for="itemTypeInputGroup">Type:</label>
                                     <select name="menuType" class="form-select" id="itemTypeInputGroup" >
-                                        <option name="menuType" value="Appetizer">Appetizer</option>
-                                        <option name="menuType" value="Sushi">Sushi</option>
-                                        <option name="menuType" value="Temaki">Temaki</option>
-                                        <option name="menuType" value="Bento">Bento</option>
-                                        <option name="menuType" value="Ramen">Ramen</option>
-                                        <option name="menuType" value="Beverage">Beverage</option>
-                                        <option name="menuType" value="Dessert">Dessert</option>
+                                        <option name="menuType" value="Appetizer" >Cofee</option>
+                                        <option name="menuType" value="Temaki" >Non Cofee</button>
+                                        <option name="menuType" value="Sushi" >Signature</button>
+                                        <option name="menuType" value="Bento" >Food</button>
                                     </select>
                                 </div>
                             </div>
@@ -188,13 +185,10 @@
                                     <label class="input-group-text" for="itemTypeInputGroup">Type:</label>
                                     <select name="menuType" class="form-select" id="itemTypeInputGroup" >
                                         <option name="menuType" value="">All</option>
-                                        <option name="menuType" value="Appetizer">Appetizer</option>
-                                        <option name="menuType" value="Sushi">Sushi</option>
-                                        <option name="menuType" value="Temaki">Temaki</option>
-                                        <option name="menuType" value="Bento">Bento</option>
-                                        <option name="menuType" value="Ramen">Ramen</option>
-                                        <option name="menuType" value="Beverage">Beverage</option>
-                                        <option name="menuType" value="Dessert">Dessert</option>
+                                        <option name="menuType" value="Appetizer" >Cofee</option>
+                                        <option name="menuType" value="Temaki" >Non Cofee</button>
+                                        <option name="menuType" value="Sushi" >Signature</button>
+                                        <option name= "menuType" value="Bento" >Food</button>                           
                                     </select>
                                 </div>
                             </div>
@@ -281,7 +275,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">For {{ $menu->size }} people</h6>
                         
                         <div class="d-flex justify-content-between">
-                            <p class="card-text fs-5 fw-bold">RM {{ number_format($menu->price, 2) }}</p>
+                            <p class="card-text fs-5 fw-bold">Rp {{ number_format($menu->price, 2) }}</p>
                             <h6 class="card-text flex-center">
                                 @if($menu->allergic)
                                 <i class="fa fa-exclamation-circle allergic-alert" aria-hidden="true" data-bs-toggle="tooltip" title="Allergic Warning"></i>
