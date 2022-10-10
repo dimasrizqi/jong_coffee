@@ -43,7 +43,7 @@
         <nav data-theme="@yield('navTheme')" class="home-nav @yield('navTheme')">
             <a href="/" class="logo-wrapper">
                 <img class="logo" src="@yield('logoFileName')" alt="logo">
-                <h3 class="logo-name">{{ config('app.name') }}</h3>
+                <h3 class="logo-name">{{ config('app.name', "jong") }}</h3>
             </a>
             <ul class="nav-links">
             @if (auth()->user()->role == 'admin')

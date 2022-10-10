@@ -94,11 +94,11 @@
                 </div>
                 <div class="footer-detail">
                     <p><b>Tuesday to Friday</b></p>
-                    <p>7:00 AM - 9:00 PM</p>
+                    <p>2:00 AM - 10:00 PM</p>
                 </div>
                 <div class="footer-detail">
                     <p><b>Saturday & Sunday</b></p>
-                    <p>11:00 AM - 10:00 PM</p>
+                    <p>2:00 AM - 10:00 PM</p>
                 </div>
             </div>
 
@@ -110,9 +110,7 @@
                     </svg>
                 </div>
                 <div class="footer-detail">
-                    <p>123, Jalan Example 5,</p>
-                    <p>Sri Petaling,</p>
-                    <p>58200, Kuala Lumpur.</p>
+                <a target="_blank" href = "https://goo.gl/maps/JEEijyo4Z5kZXGqc6">Jl. Mayjen H.R. Edi Sukma No.51, Cigombong, Kec. Cigombong, Kabupaten Bogor, Jawa Barat 16110</a>
                 </div>
             </div>
 
