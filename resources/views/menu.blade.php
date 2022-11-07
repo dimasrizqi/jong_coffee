@@ -1,4 +1,4 @@
-<!-- 
+<!--
     Programmer Name: Mr. Lai Pin Cheng, Developer
     Description: Page where admin may view and update menu while customer can view menu and add menu to cart
     Edited on: 14 April 2022
@@ -35,18 +35,18 @@
         <div class="row menu-bar">
         @if (Auth::check() && auth()->user()->role == 'admin')
             <div class="col-md-1 d-flex align-items-center">
-                <div class="dropstart">    
+                <div class="dropstart">
                     <button type="button" class="btn btn-success" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" id="filter-button">
                         <i class="fa fa-plus" aria-hidden="true"></i></i>
                     </button>
-                    <div class="dropdown-menu">    
+                    <div class="dropdown-menu">
                         <form method='post' action="{{ route('saveMenuItem') }}" enctype="multipart/form-data" class="px-4 py-3" style="min-width: 350px">
                             @csrf
                             <div class="mb-2">
                                 <label for="formFile" class="form-label">Item Image</label>
                                 <input name="menuImage" class="form-control" type="file" id="item-image" required>
                             </div>
-                            
+
                             <div class="dropdown-divider"></div>
 
                             <div class="mb-2">
@@ -58,10 +58,11 @@
                                         <option name="menuType" value="Temaki" >Non Cofee</button>
                                         <option name="menuType" value="Sushi" >Signature</button>
                                         <option name="menuType" value="Bento" >Food</button>
+                                        <option name="menuType" value="Dessert">Kue Basah</option>
                                     </select>
                                 </div>
                             </div>
-                            
+
                             <div class="dropdown-divider"></div>
 
                             <div class="mb-1">
@@ -103,7 +104,7 @@
                             </div>
 
                             <div class="dropdown-divider"></div>
-                            
+
                             <div class="mb-2">
                                 <label for="ItemSize" class="form-label">Portion</label>
                                 <div class="input-group mb-3">
@@ -159,7 +160,7 @@
                     <button type="submit" name="menuType" value="Temaki" class="btn btn-light menu-type-button">Non Cofee</button>
                     <button type="submit" name="menuType" value="Sushi" class="btn btn-light menu-type-button">Signature</button>
                     <button type="submit" name="menuType" value="Bento" class="btn btn-light menu-type-button">Food</button>
-                   
+                    <button type="submit" name="menuType" value="Dessert" class="btn btn-light menu-type-button">Kue Basah</button>
                 </form>
             </div>
         @else
@@ -170,15 +171,15 @@
                     <button type="submit" name="menuType" value="Temaki" class="btn btn-light menu-type-button">Non Cofee</button>
                     <button type="submit" name="menuType" value="Sushi" class="btn btn-light menu-type-button">Signature</button>
                     <button type="submit" name="menuType" value="Bento" class="btn btn-light menu-type-button">Food</button>
-                    
+                    <button type="submit" name="menuType" value="Dessert" class="btn btn-light menu-type-button">Kue Basah</button>
                 </form>
             </div>
         @endif
             <div class="col-md-2 d-flex align-items-center">
-                <div class="dropstart w-100 d-flex justify-content-end">    
+                <div class="dropstart w-100 d-flex justify-content-end">
                     <button type="button" class="btn btn-dark" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" id="filter-button">Filter <i class="fa fa-filter" aria-hidden="true"></i></button>
                     <div class="dropdown-menu">
-                        <form method="get" action="{{ route('filterMenu') }}" class="px-4 py-3 " style="min-width: 350px">    
+                        <form method="get" action="{{ route('filterMenu') }}" class="px-4 py-3 " style="min-width: 350px">
                             <div class="mb-2">
                                 <label for="ItemType" class="form-label">Item Type</label>
                                 <div class="input-group mb-3">
@@ -188,13 +189,14 @@
                                         <option name="menuType" value="Appetizer" >Cofee</option>
                                         <option name="menuType" value="Temaki" >Non Cofee</button>
                                         <option name="menuType" value="Sushi" >Signature</button>
-                                        <option name= "menuType" value="Bento" >Food</button>                           
+                                        <option name= "menuType" value="Bento" >Food</button>
+                                        <option name= "menuType" value="Dessert" >Kue Basah</button>
                                     </select>
                                 </div>
                             </div>
-                            
+
                             <div class="dropdown-divider"></div>
-                        
+
                             <div class="col-12 mb-3">
                                 <label for="PriceRange" class="form-label">Price range</label>
                                 <div class="input-group mb-3">
@@ -204,9 +206,9 @@
                                     <input name="toPrice" type="text" class="form-control" placeholder="To Price" aria-label="To Price">
                                 </div>
                             </div>
-                            
+
                             <div class="dropdown-divider"></div>
-                            
+
 
                             <div class="mb-2">
                                 <label for="ItemSize" class="form-label">Portion</label>
@@ -252,13 +254,13 @@
                 </div>
             </div>
         </div>
-        
-        
+
+
 
 
         <div class="d-flex flex-wrap mt-4 mb-5">
         @forelse ($menus as $menu)
-            
+
             <div class="card col-md-3 col-6 d-flex align-items-center">
                 <div class="card-body w-100">
                     <form class="d-flex flex-column justify-content-between h-100" action="{{ route('addToCart') }}" method="post">
@@ -268,12 +270,12 @@
                         </div>
 
                         <h5 class="card-title mt-3">
-                            {{ $menu->name }} 
+                            {{ $menu->name }}
                         </h5>
-                        
+
                         <h6 class="card-subtitle mb-2 text-muted">{{ $menu->description }}</h6>
                         <h6 class="card-subtitle mb-2 text-muted">For {{ $menu->size }} people</h6>
-                        
+
                         <div class="d-flex justify-content-between">
                             <p class="card-text fs-5 fw-bold">Rp {{ number_format($menu->price, 2) }}</p>
                             <h6 class="card-text flex-center">
@@ -296,7 +298,7 @@
                                 <button type="submit" class="primary-btn w-100 mt-3">Add to Cart</button>
                             @elseif (auth()->user()->role == 'admin')
                                 <div class="dropdown w-100 mt-3">
-                                    <a href="#" role="button" id="dropdownMenuLink" 
+                                    <a href="#" role="button" id="dropdownMenuLink"
                                         data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                         <button class="primary-btn w-100">Edit</button>
                                     </a>
@@ -312,7 +314,7 @@
                     </form>
                 </div>
             </div>
-        
+
         @empty
         <div class="row">
             <div class="col-12">

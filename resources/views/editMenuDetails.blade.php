@@ -1,4 +1,4 @@
-<!-- 
+<!--
 // Programmer 1: Mr. Lai Pin Cheng, Developer
 // Description: Edit menu details (Admins can edit menu details)
 // Edited on: 14 April 2022
@@ -36,10 +36,11 @@
                 <option name="menuType" value="Temaki" >Non Cofee</button>
                 <option name="menuType" value="Sushi" >Signature</button>
                 <option name="menuType" value="Bento" >Food</button>
+                <option name="menuType" value="Dessert">Kue Basah</option>
             </select>
         </div>
     </div>
-    
+
     <div class="dropdown-divider"></div>
 
     <div class="mb-1">
@@ -81,7 +82,7 @@
     </div>
 
     <div class="dropdown-divider"></div>
-    
+
     <div class="mb-2">
         <label for="ItemSize" class="form-label">Portion</label>
         <div class="input-group mb-3">
@@ -138,7 +139,7 @@
         </div>
         <div class="form-check">
             <input name="menuVegan" type="hidden" value=0>
-        
+
             @if( $menu['vegan'] == 1)
             <label class="form-check-label active" for="dropdownCheck">
                 <input name='menuVegan' value=1 type="checkbox" class="form-check-input" id="dropdownCheck" checked="checked">Vegan
