@@ -1,6 +1,6 @@
-<!-- 
+<!--
     Programmer Name: Ms. Lim Jia Yong, Project Manager
-    Description: Home / landing page for customers or unregistered user 
+    Description: Home / landing page for customers or unregistered user
     Edited on: 28 February 2022
  -->
 
@@ -37,7 +37,16 @@
         <div class="row justify-content-evenly align-items-center chefs-wrapper">
             <div class="card col-lg-3 col-md-8 col-10 mt-5">
                 <div class="chef-img d-flex align-items-center justify-content-center">
-                    <img src="./images/chef1.jpg" alt="">
+                    <img src="./images/chef1.png" alt="">
+                </div>
+                <div class="chef-desc d-flex flex-column align-items-center justify-content-start">
+                    <p class="chef-name">Dinal</p>
+                    <p class="chef-position">Barista</p>
+                </div>
+            </div>
+            <div class="card col-lg-3 col-md-8 col-10 mt-5">
+                <div class="chef-img d-flex align-items-center justify-content-center">
+                    <img src="./images/chef2.png" alt="">
                 </div>
                 <div class="chef-desc d-flex flex-column align-items-center justify-content-start">
                     <p class="chef-name">Hadi</p>
@@ -46,19 +55,10 @@
             </div>
             <div class="card col-lg-3 col-md-8 col-10 mt-5">
                 <div class="chef-img d-flex align-items-center justify-content-center">
-                    <img src="./images/chef2.jpg" alt="">
+                    <img src="./images/chef3.jpeg" alt="">
                 </div>
                 <div class="chef-desc d-flex flex-column align-items-center justify-content-start">
-                    <p class="chef-name">Erick</p>
-                    <p class="chef-position">Barista</p>
-                </div>
-            </div>
-            <div class="card col-lg-3 col-md-8 col-10 mt-5">
-                <div class="chef-img d-flex align-items-center justify-content-center">
-                    <img src="./images/chef3.jpg" alt="">
-                </div>
-                <div class="chef-desc d-flex flex-column align-items-center justify-content-start">
-                    <p class="chef-name">Dinal</p>
+                    <p class="chef-name">Erik</p>
                     <p class="chef-position">Barista</p>
                 </div>
             </div>

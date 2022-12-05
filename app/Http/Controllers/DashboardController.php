@@ -30,7 +30,7 @@ class DashboardController extends Controller
         $lastMonthDate = Carbon::now()->subDays(30)->toDateTimeString();
         $today = Carbon::today()->toDateString();
         $oneMonthTransactions = Transaction::where('created_at', '>=', $lastMonthDate)->get();
-        
+
         // ================   Calculate Revenue   ========================
         $totalRevenue = $oneMonthTransactions->sum("final_amount");
         // $dailyRevenue will store date-revenue pair for the past 30 days
@@ -120,8 +120,8 @@ class DashboardController extends Controller
 
         // Ensure the arrays are complete even when there is no order for that day
         $interval = DateInterval::createFromDateString('1 day');
-        $period = new DatePeriod(new DateTime($lastMonthDate), $interval, new DateTime($today));  
-        
+        $period = new DatePeriod(new DateTime($lastMonthDate), $interval, new DateTime($today));
+
         foreach ($period as $date) {
             $date = $date->format('Y-m-d');
             if (!$dailyRevenue->contains('date', $date))
@@ -147,9 +147,9 @@ class DashboardController extends Controller
 
         // calculate number of customer
         $numCustomer = User::where("role", "customer")->count();
-        
+
         $startDate = Carbon::parse($lastMonthDate)->format('Y-m-d');
         return view('dashboard', compact("startDate", "today", "totalRevenue", "dailyRevenue", "totalCost", "grossProfit",
-                "totalOrders", "dailyOrders", "discountCodeUsed", "numCustomer", "categoricalSales", "finalProductSales")); 
+                "totalOrders", "dailyOrders", "discountCodeUsed", "numCustomer", "categoricalSales", "finalProductSales"));
     }
 }

@@ -1,4 +1,4 @@
-/* 
+/*
     Programmer 1: Mr. Tan Wei Kang, Developer
     Programmer 2: Ms. Lim Jia Yong, Project Manager
     Description: Renders all charts and graphs with data queried from database
@@ -7,7 +7,7 @@
 
 // https://apexcharts.com/javascript-chart-demos/dashboards/modern/
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   // Extracting data
   const dailyRevenue = JSON.parse(document.querySelector('#generated-revenue').dataset.daily);
   const totalRevenue = parseFloat(document.querySelector('#generated-revenue').dataset.total);
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     padding: { right: 0, left: 0 }
   }
   Apex.dataLabels = { enabled: false }
-  
+
 
   // Chart 1 - Revenue Area Chart
   var revenue = {
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     xaxis: { type: 'datetime' },
     colors: ['#DCE6EC'],
     title: {
-      text: `RM ${totalRevenue.toFixed(2)}`,
+      text: `RP ${totalRevenue.toFixed(2)}`,
       offsetX: 30,
       style: { fontSize: '24px', cssClass: 'apexcharts-yaxis-title' }
     },
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  
+
   // Chart 7 - Order-Revenue Mixed bar line chart
   var orderRevenue = {
     series: [{
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       text: 'Orders',
       style: { fontSize: '14px', cssClass: 'apexcharts-yaxis-title' }
     },
-  
+
   }, {
     opposite: true,
     title: {
